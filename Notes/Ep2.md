@@ -1,4 +1,4 @@
-# Episode 2: How JavaScript code is executed?!
+# Episode 2: How JavaScript code is executed? And Call Stack!
 
 Let us look at this code.
 
