@@ -1,4 +1,4 @@
-# Episode 1
+# Episode 1: How JavaScript works?!
 
 *Everything in JavaScript happens inside an "Execution Context"*
 
