@@ -1,4 +1,4 @@
-# Episode 6: undefined Vs. not defined in JS
+# Episode 6: undefined vs. not defined in JS
 
 When JS is in memory allocation phase, it allocates each variable to a placehold. That placeholder is known as *undefined*.
 
