@@ -12,8 +12,6 @@ We can access these functions anywhere inside our JS program, and this is provid
 
 *this* variable points to *window*.
 
-
-
 Whenever a GEC is created, a *this* is created along with it. Here the Global object provided by the browser engine is *window*, so *this* points to *window*.
 
 __GLOBAL SPACE__ is anything that is not inside any function. In global space variables and functions can be present.
