@@ -1,4 +1,4 @@
-# < NamasteJavaScript />👨‍💻
+# < NamasteJavaScript />👨‍💻 🙏
 
 ### Creating well-written notes for anyone who wants to learn and refer JavaScript concepts in deep.
 
