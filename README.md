@@ -14,7 +14,7 @@
 * [NamasteJavaScript](https://www.youtube.com/playlist?list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP) by [Akshay Saini](https://www.linkedin.com/in/akshaymarch7/?originalSubdomain=in)
 ---
 ### __We love Contributions💖__:
-Feel free to create an issue about what topic you want to add explanations or code snippets that covers core JS concepts in a better and lucid way. Link a PR with it and we are ready to help you!
+Feel free to create an issue about what topic you want to add explanations or code snippets that covers core JS concepts in a better and lucid way. Link a PR with it and we are ready to accept your invaluable contribution!
 
 ---
 ### Contributors💻:
