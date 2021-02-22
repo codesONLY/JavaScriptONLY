@@ -1,6 +1,6 @@
 function minDate(date1,date2){
-    date1Transform = new Date(date1);
-    date2Transform = new Date(date2);
+    let date1Transform = new Date(date1);
+    let date2Transform = new Date(date2);
     
     return (date1Transform > date2Transform)?date2:date1
   }

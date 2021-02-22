@@ -1,5 +1,5 @@
 function toSentenceCase(sentence){
-    sentencecaseArr = sentence.split(" ");
+    let sentencecaseArr = sentence.split(" ");
     for(let i in sentencecaseArr){
       sentencecaseArr[i] = sentencecaseArr[i].split('');
       sentencecaseArr[i][0] = sentencecaseArr[i][0].toUpperCase();
