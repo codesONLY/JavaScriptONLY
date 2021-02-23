@@ -10,4 +10,17 @@ function charCount(str){
     return dict
   }
   
-  charCount("Hello")
+  const ans = charCount("Hello")
+  
+  // Most repeated character
+  
+  let max = {value:-Infinity};
+  
+  for(let i of Object.keys(ans)){
+    if(ans[i] > max.value){
+      max = {value:ans[i], key:i}
+    }
+  
+  }
+  
+  console.log(max.key)
