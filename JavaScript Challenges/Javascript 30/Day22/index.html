@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 22</title>
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        *, *::after, *::before{
+            box-sizing: inherit;
+        }
+        body{
+            min-height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            background:
+                linear-gradient(45deg, hsla(340, 100%, 55%, 1) 0%, hsla(340, 100%, 55%, 0) 70%),
+                linear-gradient(135deg, hsla(225, 95%, 50%, 1) 10%, hsla(225, 95%, 50%, 0) 80%),
+                linear-gradient(225deg, hsla(140, 90%, 50%, 1) 10%, hsla(140, 90%, 50%, 0) 80%),
+                linear-gradient(315deg, hsla(35, 95%, 55%, 1) 100%, hsla(35, 95%, 55%, 0) 70%);
+        }
+        .menu {
+            padding: 0;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin:100px 0;
+        }
+        .menu a {
+            display: inline-block;
+            padding: 5px;
+            margin: 0 20px;
+            color: black;
+        }
+        .wrapper {
+            margin: 0 auto;
+            max-width: 500px;
+            font-size: 20px;
+            line-height: 2;
+            position: relative;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+            background: rgba(0,0,0,0.05);
+            border-radius: 20px;
+        }
+
+        .highlight {
+            width: 52.68px;
+            height: 28px;
+            transition: all 0.5s;
+            border-bottom: 2px solid white;
+            position: absolute;
+            top: 100px;
+            background: white;
+            left: 376px;
+            z-index: -1;
+            border-radius: 20px;
+            display: block;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="">Home</a></li>
+            <li><a href="">Order Status</a></li>
+            <li><a href="">Tweets</a></li>
+            <li><a href="">Read Our History</a></li>
+            <li><a href="">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="wrapper">
+        <p>Lorem ipsum dolor sit amet, <a href="">consectetur</a> adipisicing elit. Est <a href="">explicabo</a> unde natus necessitatibus esse obcaecati distinctio, aut itaque, qui vitae!</p>
+        <p>Aspernatur sapiente quae sint <a href="">soluta</a> modi, atque praesentium laborum pariatur earum <a href="">quaerat</a> cupiditate consequuntur facilis ullam dignissimos, aperiam quam veniam.</p>
+        <p>Cum ipsam quod, incidunt sit ex <a href="">tempore</a> placeat maxime <a href="">corrupti</a> possimus <a href="">veritatis</a> ipsum fugit recusandae est doloremque? Hic, <a href="">quibusdam</a>, nulla.</p>
+        <p>Esse quibusdam, ad, ducimus cupiditate <a href="">nulla</a>, quae magni odit <a href="">totam</a> ut consequatur eveniet sunt quam provident sapiente dicta neque quod.</p>
+        <p>Aliquam <a href="">dicta</a> sequi culpa fugiat <a href="">consequuntur</a> pariatur optio ad minima, maxime <a href="">odio</a>, distinctio magni impedit tempore enim repellendus <a href="">repudiandae</a> quas!</p>
+    </div>
+
+    <script>
+        const trigger = document.querySelectorAll('a');
+
+        const highlight = document.createElement('span');
+        highlight.classList.add('highlight')
+        document.body.append(highlight);
+
+        function highlightLink()
+        {
+            const linkCoords = this.getBoundingClientRect();
+            const coords = {
+                width : linkCoords.width,
+                height : linkCoords.height,
+                left : linkCoords.left + window.scrollX,
+                top : linkCoords.top + window.scrollY
+            }
+            highlight.style.width = `${coords.width}px`;
+            highlight.style.height = `${coords.height}px`;
+            highlight.style.left = `${coords.left}px`;
+            highlight.style.top = `${coords.top}px`;
+        }
+        
+        trigger.forEach(link => link.addEventListener('mouseenter', highlightLink));
+    </script>
+</body>
+</html>

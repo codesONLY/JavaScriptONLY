@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Day14 - JS Reference vs Copy</title>
+</head>
+<body>
+
+  <script>
+    let age = 100;
+    let h2 = age;
+    console.log(age, h2); // 100 100
+    age = 200; 
+    console.log(age, h2); // 200 100
+    // means for strings, numbers and bools even if we change the original variable, copied variable will not change
+
+
+    const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
+    const team = players;
+
+    console.log(players, team);
+    team[2] = 'Lux';
+    console.log(players, team);
+    // here both the arrays change. means team created here is not a copy but a reference of players array and when anyone of them change, they reference back and change each other
+    // both of these point to same array and thus both of these change
+
+    // but sometimes we don;t want to change the original one, so how to take a copy:
+    // method 1
+    let team2 = players.slice();
+
+    // method2
+    let team3 = [].concat(players);
+
+    // method3
+    let team4 = [...players];
+    
+    // method4
+    let team5 = Array.from(players);
+
+
+    // The same thing happens with objects
+    const person = {
+      name: 'Danny',
+      age: 80,
+      social: {
+          insta: "abc",
+          fb: "abc"
+      }
+    };
+
+    const person2 = Object.assign({}, person, { age: 70 });
+    person2.lang = "english";
+
+    const person3 = {...person}
+
+    // note one thing that these things work only one level deep. that is if we are changing the name, of the copy object then original object will not change. 
+    // But if we change the onject inside the copy object (i.e social obj) then it would surely change in original object too
+
+    // too overcome the above situation we have one solution
+
+    let person4 = JSON.parse(JSON.stringify(person));
+  </script>
+
+</body>
+</html>

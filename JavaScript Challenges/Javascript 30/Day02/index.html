@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Clock</title>
+        <style>
+            html{
+                background: linear-gradient(to left,blue,rgb(158, 189, 250)) no-repeat center center/cover;
+                text-align: center;
+                font-size: 1rem;
+            }
+            body{
+                display: flex;
+                flex: 1;
+                min-height: 100vh;
+                align-items: center;
+            }
+            .clock{
+                width: 30rem;
+                height: 30rem;
+                border: 10px solid white;
+                border-radius: 50%;
+                margin: 50px auto;
+                position: relative ;
+                padding: 2rem;
+                box-shadow:0 0 0 4px rgba(0,0,0,0.1),inset 0 0 0 3px #efefef, inset 0 0 10px black,0 0 10px rgba(0,0,0,0.2);
+            }
+            .clock-face{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                transform: translateY(-3px);
+            }
+            .hand
+            {
+                height: 50%;
+                background: black;
+                width: 6px;
+                position: absolute;
+                left:50%;
+                transform-origin: bottom;
+            }
+            .hour-hand{
+                height: 30%;
+                top:20%;
+            }
+            .minute-hand{
+                height: 40%;
+                top: 10%;
+                width: 4px;
+            }
+            .second-hand{
+                width: 2px;
+            }
+            .holder{
+                position: absolute;
+                left: 49.5%;
+                top:49%;
+                background-color: black;
+                width: 2%;
+                height: 2%;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    
+    <body>
+       <div class="clock">
+           <div class="clock-face">
+               <div class="hand hour-hand" id="hours"></div>
+               <div class="hand minute-hand" id="minutes"></div>
+               <div class="hand second-hand" id="seconds"></div>  
+               <div class="holder"></div>  
+           </div>
+       </div> 
+
+
+       <script>
+
+           setInterval(() => {
+            let time = new Date();
+            let hours = time.getHours();
+            let minutes = time.getMinutes();
+            let seconds = time.getSeconds();
+
+            hrotation = 30 * (hours % 12) + minutes / 2 ; 
+            mrotation = 6 * minutes ;    // each minute makes 6deg turn for minute hand
+            srotation = 6 * seconds ;   // each second makes 6deg turn for second hand
+            console.log(`${hours}:${minutes}:${seconds}`)
+            document.getElementById("hours").style.transform = `rotate(${hrotation}deg)`;
+            document.getElementById("minutes").style.transform = `rotate(${mrotation}deg)`;
+            document.getElementById("seconds").style.transform = `rotate(${srotation}deg)`;
+               
+           }, 1000);
+       </script>
+    </body>
+
+</html>

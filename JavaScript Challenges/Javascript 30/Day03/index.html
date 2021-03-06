@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS variables</title>
+    <style>
+        :root{
+            --base : #ffc600;
+            --spacing : 10px;
+            --blur : 10px;
+        }
+        body{
+            text-align: center;
+            background-color:#193549;
+            color: white;
+            font-weight: 100;
+            font-size: 30px;
+        }
+        #hl{
+            color: var(--base);
+        }
+        .controls{
+            margin-bottom: 50px;
+        }
+        input{
+            vertical-align: middle;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+        img{
+            padding: var(--spacing);
+            width: 80%;
+            height: auto;
+            background: var(--base);
+            filter: blur(var(--blur));
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Updating CSS Variables with <span id="hl">JS</span></h2>
+    <div class="controls">
+        
+        <label for="spacing">Spacing : </label> 
+        <input type="range" name="spacing" id="spacing" min="10" max="200" value="10" data-sizing="px">
+
+        <label for="blur">Blur : </label> 
+        <input type="range" name="blur" id="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="base">Base Color : </label> 
+        <input type="color" name="base" id="base" value="#ffc600">
+
+    </div>
+
+    <img src="paris.jpg" alt="Paris">
+
+    <script>
+        const inputs = document.querySelectorAll('.controls input');
+        
+        function handleUpdate(){
+            const suffix = this.dataset.sizing || '';
+            document.documentElement.style.setProperty(`--${this.name}`,this.value + suffix); 
+        }
+
+        inputs.forEach(input => {
+            input.addEventListener('change', handleUpdate);
+            input.addEventListener('mousemove', handleUpdate);
+        })
+
+    </script>
+</body>
+</html>

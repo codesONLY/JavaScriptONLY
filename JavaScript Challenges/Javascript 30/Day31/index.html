@@ -1,0 +1,84 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+     <style>
+        input[type="text"]
+        {
+            width: 2rem;
+            height: 2rem;
+        }
+        input[type="submit"]
+        {
+            background-color: black;
+            color: white;
+            height: 2rem;
+            width: 15rem;
+            border: 2px solid black;
+        }
+        form{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .inputs
+        {
+            margin: 1rem;
+        }
+        .box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px dashed black;
+        }
+     </style>
+ </head>
+ <body>
+     <form name="verify">
+         <div class="box">
+            <div class="inputs">
+                <input type="text" name="n1" maxlength="1">
+                <input type="text" name="n2" maxlength="1">
+                <input type="text" name="n3" maxlength="1">
+                <input type="text" name="n4" maxlength="1">
+                <input type="text" name="n5" maxlength="1">
+                <input type="text" name="n6" maxlength="1">
+            </div>
+            <input type="submit" value="Verify">
+        </div>
+     </form>
+
+     <script>
+        const form = document.querySelector('[name="verify"]');
+        const inputs = document.querySelectorAll('.inputs input');
+
+        function handleInput(e){
+            // console.log(e.currentTarget);
+            const input = e.target;
+
+            if(input.nextElementSibling && input.value)
+            {   
+                input.nextElementSibling.focus();
+            }
+        }
+
+        function handlePaste(e){
+            const paste = e.clipboardData.getData('text');
+
+            inputs.forEach((input, i) => { 
+                input.value = paste[i] || '';
+            });
+        }
+
+        inputs[0].addEventListener('paste', handlePaste);
+
+        form.addEventListener('input', handleInput);
+        
+     </script>
+ </body>
+ </html>
