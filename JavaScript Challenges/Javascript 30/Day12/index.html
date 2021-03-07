@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day12 - Key Detection</title>
+</head>
+<body>
+    <script>
+        let pressed = [];
+        let secretCode = "dhiraj";
+        window.addEventListener('keyup', (e) => {
+            // console.log(e.key);
+            pressed.push(e.key);
+            pressed.splice(-secretCode.length -1, pressed.length - secretCode.length);
+            // if(pressed.join('').includes(secretCode))
+            if(pressed.join('') === secretCode)
+            {
+                console.log('you did it!!');
+            }
+            // console.log(pressed);
+        })
+    </script>
+</body>
+</html>

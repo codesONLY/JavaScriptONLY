@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 27</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+
+    <div class="items">
+        <div class="item item1"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item2"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item3"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item4"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item5"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item6"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item7"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item8"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item9"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item10"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item11"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item12"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item13"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item14"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item15"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item16"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item17"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item18"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item19"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item20"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item21"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item22"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item23"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item24"><img src="https://source.unsplash.com/random" draggable="false"></div>
+        <div class="item item25"><img src="https://source.unsplash.com/random" draggable="false"></div>
+    </div>
+
+    <script>
+        const slider = document.querySelector('.items');
+        let isDown = false; // bool for mouse down or not
+        let startX;         // x value where mouse is clicked
+        let scrollLeft;     // previous scrolled value
+        let images = document.querySelectorAll('img');
+
+        images.forEach(img => img.addEventListener('dragstart', (e) => {e.preventDefault()}))
+
+        slider.addEventListener('mousedown', (e) => {
+            isDown = true;
+            slider.classList.add('active');
+            startX = e.pageX - slider.offsetLeft;
+            scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener('mouseleave', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mouseup', () => {
+            isDown = false;
+            slider.classList.remove('active');
+        });
+        slider.addEventListener('mousemove', (e) => {
+            if(!isDown) return; // means run the function only when we click
+            e.preventDefault();
+
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2;    // -ve for left, +ve for right
+            // * 2 to scroll with double speed
+            slider.scrollLeft = scrollLeft - walk;
+
+        });
+    </script>
+</body>
+</html>
