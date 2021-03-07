@@ -19,6 +19,7 @@ As always, thanks to our amazing contributors who are making the world fall in l
 <a href="https://github.com/sohamsshah/JavaScriptONLY/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=sohamsshah/JavaScriptONLY" />
 </a>
+
 ---
 
 
