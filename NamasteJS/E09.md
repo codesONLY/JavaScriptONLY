@@ -2,7 +2,7 @@
 
 ### __What is Block?__
 
-* Block is also known as *Compound Statement*. We use it group many JS statements together. We need to group them because we can group multiple statements at a place where JS expects only one statement. 
+* Block is also known as *Compound Statement*. We use it to group many JS statements together. We need to group them because we can group multiple statements at a place where JS expects only one statement. 
 
 ```
 //code example 1
