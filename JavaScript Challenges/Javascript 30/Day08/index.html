@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 8 - HTML Canvas</title>
+    <style>
+        *{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="draw" width="800" height="800"></canvas>
+
+    <script>
+        const canvas = document.querySelector("#draw");
+        const context = canvas.getContext('2d');
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        context.strokeStyle = '#BADASS';
+        context.lineJoin = 'round';
+        context.lineCap = 'round';
+        context.globalCompositeOperation = 'multiply';
+
+        let isDrawing = false;
+
+        let lastX = 0;
+        let lastY = 0;
+        let hue = 0;
+        let lineWidth = 2;
+        let direction = true;
+
+        function Draw(e)
+        {
+            if(isDrawing)
+            {
+                // console.log(e);
+                context.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+                context.beginPath();
+                context.lineWidth = lineWidth;
+                context.moveTo(lastX, lastY);   // start from
+                context.lineTo(e.offsetX, e.offsetY);   // go to
+                [lastX,lastY] = [e.offsetX, e.offsetY];
+                context.stroke();
+                hue++;
+                
+                if(hue >= 360)
+                {
+                    hue = 0;
+                }
+
+                if(lineWidth >= 200 || lineWidth <= 1)
+                {
+                    direction = !direction;
+                }
+
+                if(direction)
+                {
+                    lineWidth++;
+                }
+                else
+                {
+                    lineWidth--;
+                }
+            }
+        }
+
+        canvas.addEventListener('mousemove', Draw)
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            [lastX,lastY] = [e.offsetX, e.offsetY];     // start from the point we click and drag
+        });
+        canvas.addEventListener('mouseup', () => isDrawing = false);
+        canvas.addEventListener('mouseout', () => isDrawing = false);
+
+    </script>
+</body>
+</html>

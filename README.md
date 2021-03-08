@@ -1,4 +1,4 @@
-# < NamasteJavaScript />👨‍💻 🙏
+# < JavaScriptONLY />👨‍💻 🙏
 
 ### Its an attempt to provide high quality, well-written set of notes for anyone who wants to learn and refer JavaScript concepts in deep. 
 
@@ -7,16 +7,19 @@
 ---
 
 > JavaScript is Beautiful ♥. But it takes the eyes of the coder to admire ~ *anonymous*✨
----
 
-### __Resources📚__:
-
-* [NamasteJavaScript](https://www.youtube.com/playlist?list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP) by [Akshay Saini](https://www.linkedin.com/in/akshaymarch7/?originalSubdomain=in)
 ---
 ### __We love Contributions💖__:
-Feel free to create an issue about what topic you want to add explanations or code snippets that covers core JS concepts in a better and lucid way. Link a PR with it and we are ready to accept your invaluable contribution!
+Feel free to create an issue about what topic you want to add explanations or code snippets that covers core JS concepts in a better and lucid way. Link a PR with it and we are ready to accept your contributions! Refer [this](https://github.com/sohamsshah/JavaScriptONLY/blob/master/CONTRIBUTING.md) for more insights.
 
 ---
 ### Contributors💻:
-* [sohamsshah](https://github.com/sohamsshah)
+As always, thanks to our amazing contributors who are making the world fall in love with JavaScript 💛!    
+
+<a href="https://github.com/sohamsshah/JavaScriptONLY/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=sohamsshah/JavaScriptONLY" />
+</a>
+
 ---
+
+

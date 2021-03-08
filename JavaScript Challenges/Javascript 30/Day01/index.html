@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drum Kit</title>
+    <style>
+        body::before{
+            content: '';
+            height: 100vh;
+            width: 100vw;
+            background: url(bg.jpg) no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .container{
+            box-sizing: border-box;
+            height: 500px;
+            padding: 150px 0;
+        }
+        .rows{
+            max-width:1100px;
+            width:100%;
+            display: flex;
+            margin: 2rem auto;
+            flex-flow:row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .keys{
+            width: 70px;
+            height: 70px;
+            border: 4px solid black;
+            background: rgba(0,0,0,0.4);
+            color: black;
+            font-size: 1.5rem;
+            transition: all 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+        }
+        .pressed{
+            transform: scale(1.1);
+            font-size: 2rem;
+            box-shadow: 0 0 10px black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rows">
+            <div data-key="81" class="keys">Q</div>
+            <div data-key="87" class="keys">W</div>
+            <div data-key="69" class="keys">E</div>
+            <div data-key="82" class="keys">R</div>
+            <div data-key="84" class="keys">T</div>
+            <div data-key="89" class="keys">Y</div>
+            <div data-key="85" class="keys">U</div>
+            <div data-key="73" class="keys">I</div>
+            <div data-key="79" class="keys">O</div>
+            <div data-key="80" class="keys">P</div>
+        </div>
+        <div class="rows">        
+            <div data-key="65" class="keys">A</div>
+            <div data-key="83" class="keys">S</div>
+            <div data-key="68" class="keys">D</div>
+            <div data-key="70" class="keys">F</div>
+            <div data-key="71" class="keys">G</div>
+            <div data-key="72" class="keys">H</div>
+            <div data-key="74" class="keys">J</div>
+            <div data-key="75" class="keys">K</div>
+            <div data-key="76" class="keys">L</div>
+        </div>
+        <div class="rows">        
+            <div data-key="90" class="keys">Z</div>
+            <div data-key="88" class="keys">X</div>
+            <div data-key="67" class="keys">C</div>
+            <div data-key="86" class="keys">V</div>
+            <div data-key="66" class="keys">B</div>
+            <div data-key="78" class="keys">N</div>
+            <div data-key="77" class="keys">M</div>
+        </div>
+    </div>
+
+    <audio data-key="65" src="sounds/claps.wav"></audio>
+    <audio data-key="66" src="sounds/claps.wav"></audio>
+    <audio data-key="67" src="sounds/claps.wav"></audio>
+    <audio data-key="68" src="sounds/claps.wav"></audio>
+    <audio data-key="69" src="sounds/claps.wav"></audio>
+    <audio data-key="70" src="sounds/claps.wav"></audio>
+    <audio data-key="71" src="sounds/claps.wav"></audio>
+    <audio data-key="72" src="sounds/claps.wav"></audio>
+    <audio data-key="73" src="sounds/claps.wav"></audio>
+    <audio data-key="74" src="sounds/claps.wav"></audio>
+    <audio data-key="75" src="sounds/claps.wav"></audio>
+    <audio data-key="76" src="sounds/claps.wav"></audio>
+    <audio data-key="77" src="sounds/claps.wav"></audio>
+    <audio data-key="78" src="sounds/claps.wav"></audio>
+    <audio data-key="79" src="sounds/claps.wav"></audio>
+    <audio data-key="80" src="sounds/claps.wav"></audio>
+    <audio data-key="81" src="sounds/claps.wav"></audio>
+    <audio data-key="82" src="sounds/claps.wav"></audio>
+    <audio data-key="83" src="sounds/claps.wav"></audio>
+    <audio data-key="84" src="sounds/claps.wav"></audio>
+    <audio data-key="85" src="sounds/claps.wav"></audio>
+    <audio data-key="86" src="sounds/claps.wav"></audio>
+    <audio data-key="87" src="sounds/claps.wav"></audio>
+    <audio data-key="88" src="sounds/claps.wav"></audio>
+    <audio data-key="89" src="sounds/claps.wav"></audio>
+    <audio data-key="90" src="sounds/claps.wav"></audio>
+    
+    <script>
+        window.addEventListener('keydown',(e)=>{
+
+            const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+            const key = document.querySelector(`div[data-key="${e.keyCode}"]`)
+            // console.log(audio);
+            // console.log(key);
+            
+            
+            //if there is no audio attached to that key
+            if(!audio) return; 
+
+
+            key.classList.add('pressed');
+            audio.currentTime = 0;
+            audio.play();
+            setTimeout(()=>{
+                key.classList.remove('pressed')
+            },250)
+        })
+    </script>
+</body>
+</html>

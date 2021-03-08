@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 11 - Html Video Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player">
+        <video class="player_video viewer" src="vid.mp4"></video>
+
+        <div class="player_controls">
+            <div class="progress">
+                <div class="progress_filled"></div>
+            </div>
+            <button class="player_button toggle">►</button>
+            <input type="range" tabIndex="-1" title="volume" name="volume" class="player_slider" min="0" max="1" step="0.05" value="1">
+            <input type="range" name="playbackRate" class="player_slider" min="0.5" max="2" step="0.1" value="1">
+            <button data-skip="-10" class="player_button">« 10s</button>
+            <button data-skip="10" class="player_button">10s »</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 25</title>
+    <style>
+        html{
+            box-sizing: border-box;
+        }
+        *, *::before,*::after{
+            box-sizing: inherit;
+        }
+        body{
+            margin: 0;
+        }
+        div{
+            width: 100%;
+            padding: 100px;
+        }
+        .one{
+            background-color: thistle;
+        }
+        .two{
+            background-color: mistyrose;
+        }
+        .three{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="two">
+            <div class="three"></div>
+        </div>
+    </div>
+
+    <script>
+        const divs = document.querySelectorAll('div');
+
+
+        // 1.event capture
+        function logText(e)
+        {
+            console.log(this.classList.value);
+        }
+
+        divs.forEach(div => div.addEventListener('click', logText, {capture: true}))
+        // normally capture is false by default and so when we click on the div.three, then we get three two and one printed in console
+        // but when we provide capture true then when we click div.three then we get one two and three printed in conosle.
+        // means first time we follow depth first method, while in the second time we follow capture first method. whichever thing is captured first while traversing the dom, it is printed unlike depth first
+        // by default browsers folow depth first method, i.e they go down to the smallest element and log it and then come on to their parent and so.
+
+        // 2.propogation
+        function logText2(e)
+        {
+            console.log(this.classList.value);
+            e.stopPropagation();
+            // this will stop the click events fired on its parents. means only will be logged on console and one and two will get canceled when clicked on div.three
+        }
+
+        divs.forEach(div => div.addEventListener('click', logText2))
+        
+
+        // 3.remove Event listener
+        function logText3()
+        {
+            console.log(this.classList.value);
+        }
+
+        divs.forEach(div => div.addEventListener('click', logText3, {
+            once: true
+        }))
+
+        // instead of using removeEventListener, we can just specify once: true and so the event listener will work only once.
+        
+    </script>
+</body>
+</html>
