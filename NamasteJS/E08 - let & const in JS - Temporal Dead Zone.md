@@ -5,6 +5,7 @@
 ```
 // code example 1
 
+console.log(b);
 console.log(a);
 let a = 10;
 var b = 100;
@@ -13,6 +14,7 @@ var b = 100;
 
 Output:
 
+> undefined
 > Uncaught ReferenceError: cannot access 'a' before initialization
 
 Technically, in JS if a is hoisted, then this error wasn't expected.
