@@ -59,7 +59,7 @@ Example 3
 function counter(){
     var count = 0;
     return function incrementCounter(){
-        counter++;
+        count++;
         console.log(count)
     }
 }
