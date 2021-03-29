@@ -51,4 +51,13 @@ attachEventListeners();
 
 Event Listeners are memory-heavy. Thus we must use removeEventListeners.
 
-
+### Let us Understand callbacks in a more cleaner way with an example
+```
+function add(a, b, callback){
+    console.log(`The Sum of ${a} and ${b} is ${a+b}`);
+    callback();
+}
+add(2, 3, function disp(){
+    console.log("Print the line after addition"):
+});    
+```
