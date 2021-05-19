@@ -2,7 +2,7 @@
 
 Let us look at this code below.
 
-```
+```js
 var n=2;
 function square(num){
     var ans = num*num;
@@ -11,12 +11,11 @@ function square(num){
 
 var square2 = square(n);
 var square4 = square(4);
-
 ```
 
 When we run this code, a GLOBAL Execution context is created. It will have Memory and Code.
 
-It is created in two phases. 
+It is created in two phases.
 
 1. __First Phase(Memory Creation Phase)__: JS will allocate the memory to all variables and functions. Ex. in our code, it will reserve memory space for n.
 

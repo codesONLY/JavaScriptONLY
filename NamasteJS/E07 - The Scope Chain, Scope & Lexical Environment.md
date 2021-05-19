@@ -2,7 +2,7 @@
 
 Let us understand with the help of this code.
 
-```
+```js
 // code example 1
 
 function a(){
@@ -20,7 +20,7 @@ Output:
 
 > 10
 
-```
+```js
 // code example 2
 
 function a(){
@@ -95,18 +95,3 @@ Output:
 2. See example 2 for instance. 
 
     * The variable b is searched in GEC's local memory. And since it is not found, it goes to its parent lexical environment; but since its GEC, so it will be *null*. And thus, it throws error!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

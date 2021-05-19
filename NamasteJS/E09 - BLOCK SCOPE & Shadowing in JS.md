@@ -4,7 +4,7 @@
 
 * Block is also known as *Compound Statement*. We use it to group many JS statements together. We need to group them because we can group multiple statements at a place where JS expects only one statement. 
 
-```
+```js
 //code example 1
 
 if(true)some statement
@@ -12,7 +12,7 @@ if(true)some statement
 
 But if we want to write more statements to execute after if condition; then:
 
-```
+```js
 //code example 2
 
 if(true){
@@ -31,8 +31,7 @@ if(true){
 
 * What all variables and functions that can be accessed inside the block.
 
-```
-
+```js
 //code example 3
 
 {
@@ -62,7 +61,7 @@ Outputs:
 
 ### __What is SHADOWING in JS?__
 
-```
+```js
 //code example 4
 
 var a= 100;
@@ -84,7 +83,7 @@ Outputs:
 
 * So, a is reassigned to 10. Since both refers to same memory space i.e GLOBAL SPACE.
 
-```
+```js
 //code example 5
 
 let b = 100;
@@ -116,7 +115,7 @@ Outputs:
 
 ### __What is Illegal Shadowing?__
 
-```
+```js
 // code example 6
 
 let a = 20;
@@ -138,26 +137,11 @@ Outputs:
 
 * Since var is function scoped, it is not a problem with the code below.
 
-```
+```js
 // code example 6
 
 let a = 20;
 function x() {
     var a = 20;
 }
-
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-

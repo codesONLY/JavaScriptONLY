@@ -6,7 +6,7 @@ Function along with its lexical scope forms a closure.
 
 Function bundled along with the environment.
 
-```
+```js
 Example 1
 
 function x(){
@@ -40,7 +40,7 @@ It prints `7`. This means that `x()` didn't return `function y` but a closure. S
 
 Thus, `Closure` is nothing but a function + lexical environment(it has reference of values of vars and funcs).
 
-```
+```js
 Example 2
 
 function x(){
@@ -63,7 +63,7 @@ Output:
 }
 >100
 
-```
+```js
 Example 3
 function z(){
     var b = 900;
@@ -94,7 +94,3 @@ Above example shows that Closure bundles the lexical environment of all the pare
 - Maintaining state in `async` world
 - Set timeout
 - Iterators etc.
-
-
-
-
