@@ -2,8 +2,8 @@
 
 ### Examples to Demonstrate Closures in Interviews
 
-```
-Example 1
+```js
+// Example 1
 
 function outer(){
     var a=10;
@@ -22,14 +22,15 @@ Output:
 **Explanation**
 `outer()()` can be literally translated to:
 
-```
+```js
 var close = outer();
 close();
 ```
+
 Here `Closure` is the `inner` function + its `lexical env`.
 
-```
-Example 2
+```js
+// Example 2
 
 function outest(){
     var c = 20;
@@ -46,6 +47,7 @@ let a=100;
 var close = (outest())("helloworld);
 close();
 ```
+
 Output:
 >10 helloworld 20
 
@@ -53,8 +55,8 @@ Output:
 
 Data Hiding : Suppose if we have a variable and we want to have data privacy over it. So we can encapsulate that data so others cant access it.
 
-```
-Example 3
+```js
+// Example 3
 
 function counter(){
     var count = 0;
@@ -69,12 +71,13 @@ console.log(counter1())
 var counter2 = counter();
 console.log(counter2())
 ```
+
 Output:
 >1
 >1
 
-```
-Example 3
+```js
+// Example 4
 
 function Counter(){
     var count = 0;
@@ -106,8 +109,8 @@ We make a constructor function that has two functions increment and decrement. S
 
 It is a type of Program in the JavaScript Engine/Browser which frees up the unutlilized memory. 
 
-```
-Example 4
+```js
+// Example 5
 
 function a(){
     var x=0;
@@ -121,8 +124,8 @@ If a closure is formed, then it cannot be freed up from the memory. Garbage coll
 
 ### Smart Memory Collections
 
-```
-Example 5
+```js
+// Example 6
 
 function a(){
     var x=0;
@@ -132,17 +135,5 @@ function a(){
     }
 }
 ```
+
 Smart Garbage collection is done by modern engines and browsers. Here z is not used in anywhere and closure is not formed with that variable. Hence, z is garbage collected.
-
-
-
-
-
-
-
-
-
-
-
-
-

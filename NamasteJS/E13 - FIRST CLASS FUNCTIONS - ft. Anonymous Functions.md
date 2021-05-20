@@ -2,7 +2,7 @@
 
 ### Function Statement or Function Declaration
 
-```
+```js
 function a(){
     console.log("a")
 }
@@ -11,7 +11,7 @@ a();
 
 ### Function Expression
 
-```
+```js
 var b = function (){
     console.log("b");
 }
@@ -20,7 +20,7 @@ b();
 
 ### Anonymous Function
 
-```
+```js
 function () {
 
 }
@@ -31,13 +31,14 @@ It is unnamed function.
 
 ### Named Function Expression
 
-```
+```js
 var b = function xyz(){
     console.log(xyz);
 }
 
 b();
 ```
+
 We can also name functions in JS func expressions.
 
 ### Parameters vs. Arguments
@@ -49,4 +50,3 @@ Arguments: The variables, entities that we pass in a function call.
 ### First Class Functions
 
 Functions are first class citizens in JS. They can be passed as an argument, returned or stored as a value.
-

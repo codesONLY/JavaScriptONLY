@@ -24,8 +24,9 @@ __GLOBAL SPACE__
 
 * Whenever in a JS file, we create a global variable or a function, it gets attached with the *window* object and can be accessed through it.
 
-```
+```js
 // code example 1
+
 a=10;
 console.log(window.a);
 console.log(a);

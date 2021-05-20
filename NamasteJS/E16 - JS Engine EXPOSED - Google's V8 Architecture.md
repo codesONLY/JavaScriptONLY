@@ -40,5 +40,3 @@ V8 compiler: TurboFan -> Creates Optimized Machine Code -> Byte code
 Compiler Optimizes and Interpreter executes.
 
 Garbage collector: Orinoco, Oilpan
-
-

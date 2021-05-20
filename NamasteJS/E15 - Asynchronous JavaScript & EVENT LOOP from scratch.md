@@ -15,7 +15,8 @@ All the web APIs etc. are pushed in this.
 Microtask Queue: This is of higher priority than the Callback Queue. It does same thing as Callback Queue. It contains the Callbacks relating to those of "Promises" and Mutations.
 
 Event Loop: It is a Gate keeper. It keeps check that:
-```
+
+```js
 if(Call Stack === Empty && Callback Queue !== Empty){
     x = Callback Queue.pop()
     Call Stack.push(x);
@@ -24,6 +25,3 @@ else{
     wait(till Call Stack is not empty)
 }
 ```
-
-
-
