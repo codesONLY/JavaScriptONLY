@@ -7,3 +7,4 @@
 - RabbitMQ: https://www.youtube.com/watch?v=Cie5v59mrTg&t=44s
 - REST API: https://www.youtube.com/watch?v=M3XQ6yEC51Q&list=PLQnljOFTspQXNP6mQchJVP3S-3oKGEuw9&index=1
 - Build a JavaScript Promise: https://skilled.dev/course/build-a-javascript-promise
+- What would you ask in FE interview: https://www.quora.com/What-would-you-ask-in-a-JavaScript-frontend-interview
