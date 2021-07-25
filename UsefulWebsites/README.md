@@ -137,10 +137,12 @@
 - <a href="https://www.samueltaylor.org/articles/how-to-learn-a-codebase.html">How to Join a Team and Learn a Codebase
 </a>
 
-### Blogs you can Follow:bangbang:
 
-- <a href="https://medium.com/@dan_abramov"> Dan Abramov on Medium</a>
+### People you must know!
 
-- <a href="https://overreacted.io/"> Dan Abramov </a>
+- [Dan Abramov](https://overreacted.io/)
+- [Kent C Dodds](https://kentcdodds.com/)
+- [Addy Osmani](https://addyosmani.com/)
+- [Eleftheria](https://linktr.ee/eleftheriabatsou)
 
-- <a href="https://kentcdodds.com/blog/"> KentcDodds </a>
+
