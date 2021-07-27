@@ -2,18 +2,16 @@
 
 Let us understand the concept by the following examples.
 
-```
+```js
 // code example 1
 
 var x = 7;
-
 function getName(){
     console.log("Namaste JavaScript");
 }
 
 getName();
 console.log(x);
-
 ```
 
 Output:
@@ -22,26 +20,24 @@ Output:
 
 >  7
 
-```
+```js
 // code example 2
 
 getName();
 console.log(x);
 
 var x = 7;
-
 function getName(){
     console.log("Namaste JavaScript");
 }
-
 ```
 
- Output:
+Output:
 >  Namaste JavaScript
 
 >  undefined
 
-```
+```js
 // code example 3
 
 getName();
@@ -50,7 +46,6 @@ console.log(x);
 function getName(){
     console.log("Namaste JavaScript");
 }
-
 ```
 
 Output:
@@ -61,8 +56,7 @@ Output:
 
 __Hoisting__ is a concept which enables us to extract values of variables and functions even before defining them.
 
-```
-
+```js
 // code example 4
 
 function getName(){
@@ -70,8 +64,6 @@ function getName(){
 }
 
 console.log(getName)
-
-
 ```
 
 Output:
@@ -81,8 +73,7 @@ Output:
   }
 
 
-```
-
+```js
 // code example 5
 
 getName();
@@ -92,7 +83,6 @@ console.log(getName)
 function getName(){
     console.log("Namaste JavaScript");
 }
-
 ```
 
 Output:
@@ -104,7 +94,7 @@ Output:
       console.log("Namaste JavaScript);
   }
 
-```
+```js
 // code example 6
 
 console.log(getName)
@@ -116,7 +106,6 @@ var getName = function () {
 var getName = () => {
     console.log("Namaste JavaScript");
 }
-
 ```
 
 Output:
@@ -131,17 +120,3 @@ __REASON OF WEIRDNESS__
 * The answer lies in the Global Exection Context. In the memory phase, the variables will be initialized as *undefined* and functions will get the whole function code in their memory.
 
 * This is the reason why we are getting these outputs.
-
-
-
-
-
-
-
-
-
-
-
-
-
-

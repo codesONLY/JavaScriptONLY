@@ -3,7 +3,7 @@
 
 ### Callback Function in JS
 
-```
+```js
 setTimeout(function (){
     console.log("timer");
 },5000);
@@ -22,7 +22,6 @@ Output:
 >undefined
 >Timer
 
-
 **Explanation**
 Here y is never logged out...ur passing y as arg. in x but never using it
 
@@ -38,7 +37,7 @@ JS is single threaded synchronous language.
 
 ### Important Interview Question
 
-```
+```js
 function attachEventListeners(){
     let count=0;
     document.getElementById("clickMe").addEventListener("click", console.log("Button", ++count));
@@ -52,7 +51,8 @@ attachEventListeners();
 Event Listeners are memory-heavy. Thus we must use removeEventListeners.
 
 ### Let us Understand callbacks in a more cleaner way with an example
-```
+
+```js
 function add(a, b, callback){
     console.log(`The Sum of ${a} and ${b} is ${a+b}`);
     callback();

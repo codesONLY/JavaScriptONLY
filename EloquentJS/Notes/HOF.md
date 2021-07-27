@@ -10,7 +10,7 @@ Abstractions hide details and give us the ability to talk about problems at a hi
 
 Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
 
-```
+```js
 function greaterThan(n) {
   return m => m > n;
 }
@@ -21,7 +21,7 @@ console.log(greaterThan10(11));
 
 Another Example...
 
-```
+```js
 function noisy(f) {
   return (...args) => {
     console.log("calling with", args);
@@ -40,7 +40,7 @@ noisy(Math.min)(3, 2, 1);
 
 There is a built-in array method, forEach, that provides something like a for/of loop as a higher-order function.
 
-```
+```js
 ["A", "B"].forEach(l => console.log(l));
 // → A
 // → B
@@ -54,7 +54,7 @@ It returns a new array that has filtered values.
 
 Suppose we have some SCRIPT data, then:
 
-```
+```js
 SCRIPT.filter(s => s.direction == "ttb")
 ```
 
@@ -62,7 +62,7 @@ SCRIPT.filter(s => s.direction == "ttb")
 
 Map function is used for mapping each value of the passed iterator object to a particular another value based on the `transform` method passed.
 
-```
+```js
 SCRIPT.map(s=> s.name);
 ```
 
@@ -74,12 +74,12 @@ It builds a value by repeatedly taking a single element from the array and combi
 
 Parameters to reduce are: Array, Combining function and a Start value.
 
-```
+```js
 console.log([1, 2, 3, 4].reduce((a, b) => a + b));
 // → 10
 ```
 
-```
+```js
 function characterCount(script) {
   return script.ranges.reduce((count, [from, to]) => {
     return count + (to - from);
@@ -97,7 +97,7 @@ console.log(SCRIPTS.reduce((a, b) => {
 
 
 
-```
+```js
 function average(array) {
   return array.reduce((a, b) => a + b) / array.length;
 }

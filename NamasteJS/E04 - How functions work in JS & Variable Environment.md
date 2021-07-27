@@ -2,7 +2,7 @@
 
 Let us understand the execution of the functions in JS by the simple example.
 
-```
+```js
 // code example 
 
 var x=1;
@@ -19,7 +19,6 @@ function b(){
     var x=100;
     console.log(x);
 }
-
 ```
 
 Outputs:

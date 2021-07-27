@@ -2,14 +2,13 @@
 
 > let and const declarations are hoisted; but differently. 
 
-```
+```js
 // code example 1
 
 console.log(b);
 console.log(a);
 let a = 10;
 var b = 100;
-
 ```
 
 Output:
@@ -32,7 +31,7 @@ Technically, in JS if a is hoisted, then this error wasn't expected.
 * window.b, this.b will print the value of b. But window.a and this.a will show it undefined as we know that window and this refer to variables in Global memory. Since, a is stored in seperate space, it cannot be accessed.
 
 
-```
+```js
 // code example 2
 
 const b;
@@ -43,7 +42,7 @@ console.log(b);
 Outputs:
 > Uncaught SyntaxError: Missing initializer in const declaration
 
-```
+```js
 // code example 3
 
 const b=1000;
@@ -113,18 +112,3 @@ The Errors that occurs if no reference is available for access. Can occur when t
 * If not, use let.
 * Avoid var.
 * Declare all variables with let at the top to avoid errors to shrink temporal dead zone to zero.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

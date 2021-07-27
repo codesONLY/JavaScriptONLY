@@ -2,7 +2,7 @@
 
 Let us understand by a simple example.
 
-``` 
+```js
 function x(){
     for(var i=0; i<=5; i++){
         setTimeout(function (){
@@ -13,6 +13,7 @@ function x(){
 }
 x();
 ```
+
 Expected:
 >Namaste JS
 > 1 (after 1s)
@@ -42,7 +43,7 @@ Here, all the `setTimeout`s are closures, and thus they have reference of lexica
 
 ### How to solve this?
 
-``` 
+```js
 function x(){
     for(let i=0; i<=5; i++){
         setTimeout(function (){
@@ -53,6 +54,7 @@ function x(){
 }
 x();
 ```
+
 Output:
 >Namaste JS
 > 1 (after 1s)
@@ -70,7 +72,7 @@ And so, in async queue, all `setTimeout` has unique value of `i` at a different 
 
 ### How to solve this without using `let`?
 
-``` 
+```js
 function x(){
     for(var i=0; i<=5; i++){
         function close(x){
@@ -90,14 +92,3 @@ x();
 We enclose the `setTimeout` inside a `close()` function. And everytime in a loop, we call `close(i)` which passes a unique value of `i` to each time `setTimeout` is called as `x` is already inside the lexical environment.
 
 In this way the problem is tackled.
-
-
-
-
-
-
-
-
-
-
-
