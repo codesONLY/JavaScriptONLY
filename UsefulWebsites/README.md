@@ -29,6 +29,8 @@
 
 - <a href="http://es6-features.org/"> ECMAScript 6: Feature Overview & Comparison </a>
 
+- <a href="https://www.tutorialspoint.com/javascript/"> JavaScript Basics Tutorial</a>
+
 ### ReactJS:blue_book:
 
 - <a href="https://github.com/typescript-cheatsheets/react"> Cheatsheets for experienced React developers getting started with TypeScript </a>
