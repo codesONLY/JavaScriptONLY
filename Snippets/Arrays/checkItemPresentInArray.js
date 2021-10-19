@@ -1,5 +1,5 @@
-/**
- * Problem: Checks whether pizza is available in the menu
+/*
+ * Problem: Checks whether the dish you wish to eat is available in the menu
  */
 
 let polarBearMenu = [
@@ -9,19 +9,19 @@ let polarBearMenu = [
   "Fruit zest",
 ];
 
-let isPizzaAvailable = false;
+let isYourDishAvailable = false;
 let itemYouWishToEat = "Gudbud";
 
 for (let itemNumber = 0; itemNumber < polarBearMenu.length; itemNumber++) {
   if (polarBearMenu[itemNumber] === itemYouWishToEat) {
     console.log("Yay " + itemYouWishToEat + " is there in the menu");
-    isPizzaAvailable = true;
+    isYourDishAvailable = true;
     break;
   } else {
-    isPizzaAvailable = false;
+    isYourDishAvailable = false;
   }
 }
 
-if (isPizzaAvailable === false) {
+if (!isYourDishAvailable) {
   console.log("Oops! " + itemYouWishToEat + " is not available. Try searching at a different place.");
 }
