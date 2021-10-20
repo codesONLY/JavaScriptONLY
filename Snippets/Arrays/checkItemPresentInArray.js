@@ -1,4 +1,4 @@
-/**
+/*
  * Problem: Checks whether the dish you wish to eat is available in the menu
  */
 

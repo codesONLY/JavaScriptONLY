@@ -9,3 +9,4 @@ console.log(typeof numbers.join(",")); // string
 
 const names = ["Javascript", "Python", "PHP"];
 console.log(names.join(",")); // 'Javascript', 'Python', 'PHP'
+
