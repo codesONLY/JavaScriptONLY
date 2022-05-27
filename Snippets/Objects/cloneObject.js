@@ -34,3 +34,7 @@ console.log(user.name); // now user = { name: "Pete" }
 let clone2 = Object.assign({}, user); // shallow copy
 
 console.log(clone2);
+
+// clone in a different way
+
+let clone = Object.defineProperties({}, Object.getOwnPropertyDescriptors(obj));
