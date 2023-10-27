@@ -19,6 +19,7 @@ Feel free to create an issue about what topic you want to add explanations or co
 ### How can I contribute?
 
 - If you are into Data Structures and Algorithms ft. JavaScript, contribute by adding your favourite ones to [here](/DSA)
+- Following Striver's [SDE-Sheet](https://docs.google.com/document/d/1SM92efk8oDl8nyVw8NHPnbGexTS9W-1gmTEYfEurLWQ/edit)? We believe that it is a good resource to prepare for DSA rounds. Contribute your JS Solutions from the sheet [here](/SDE_Sheet)! 
 - If you are practicing JavaScript Interview Questions, share your approach and learnings [here](/InterviewQuestions)
 - Have got Code Snippets in JavaScript? Dump them in [here](/Snippets)
 - Love taking Notes? We are looking for contributions to [NamasteJS](/NamasteJS) and [EloquentJS](/EloquentJS) currently!

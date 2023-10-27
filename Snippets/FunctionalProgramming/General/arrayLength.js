@@ -1,3 +1,5 @@
+// finds array length
+
 function arrayLength(arr){
     let len = 0;
     while(arr[len] !== undefined){
