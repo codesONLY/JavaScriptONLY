@@ -6,7 +6,7 @@ const countingSort = (arr, size, place) => {
   
   let freq = new Array(max + 1).fill(0);
   
-  
+  // this is one of my updation
   for (let i = 0; i < size; i++){
       const num = Math.floor(arr[i] / place) % 10;
       freq[num]++;
