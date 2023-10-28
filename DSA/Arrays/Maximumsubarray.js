@@ -1,3 +1,4 @@
+// Maximumsubarray implementation using javascript
 var maxSubArray = function(nums) {
   var prev = 0;
   var max = -Infinity;

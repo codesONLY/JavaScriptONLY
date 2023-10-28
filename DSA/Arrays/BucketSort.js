@@ -1,3 +1,4 @@
+// BucketSort Implementation using javascript
 const arr = [5, 3, 1, 2, 4, 7, 6];
 const bucketSort = (arr) => {
   if (arr.length === 0) {
