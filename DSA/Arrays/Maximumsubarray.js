@@ -10,3 +10,10 @@ var maxSubArray = function(nums) {
   }
   return max;
 };
+
+
+// In the above code, we are using Kadane's algorithm to find the maximum sum of contiguous subarray.
+// Time Complexity: O(n)
+// Space Complexity: O(1)
+// where n is the number of elements in the array.
+// The idea is to maintain a contiguous sum of the array and update the maximum sum obtained so far.
