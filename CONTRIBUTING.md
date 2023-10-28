@@ -9,6 +9,7 @@ We are happy to welcome all the contributions from anyone willing to improve thi
 - Enhancements in the exisiting code-snippets or Notes
 - More ideas are welcomed!
   
+#drftgyhujiko
 # Submitting Contributions👩‍💻👨‍💻  
 Below you will find the process and workflow used to review and merge your changes.  
 ## Step 0 : Find an issue  
