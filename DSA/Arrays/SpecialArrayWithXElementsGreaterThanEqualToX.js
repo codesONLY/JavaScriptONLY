@@ -17,3 +17,8 @@
     return -1
     
 };
+
+// complexities for this special array problem:
+
+// Time Complexity: O(n2)
+// Space Complexity: O(1)

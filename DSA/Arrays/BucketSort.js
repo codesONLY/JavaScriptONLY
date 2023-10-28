@@ -46,3 +46,11 @@ const insertion = (arr) => {
   return arr;
 };
 console.log(bucketSort(arr));
+
+// In bucket sort, we distribute the elements of the array into a number of buckets.
+// Each bucket is then sorted individually, either using a different sorting algorithm, or by recursively applying the bucket sorting algorithm.
+// The above code will sort the array in ascending order.
+// Time Complexity: O(n+k)
+// Space Complexity: O(n+k)
+// where n is the number of elements in the array and k is the number of buckets.
+// In bucket sort, n elements are distributed into k buckets. Then, the elements of each bucket are sorted using any other algorithm. Finally, the elements are gathered from the buckets.

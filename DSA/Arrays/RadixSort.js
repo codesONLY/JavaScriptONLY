@@ -41,3 +41,10 @@ const radixSort = (arr, size = arr.length) => {
 }
 radixSort(arr);
 console.log(arr);
+
+// In counting sort, we count the number of elements having distinct key values (smaller than some integer k) and use arithmetic to determine the position of each key value in the output sequence.
+// The above code will sort the array in ascending order.
+// Time Complexity: O(n+k)
+// Space Complexity: O(n+k)
+// where n is the number of elements in the array and k is the range of input.
+// In counting sort, k is the range of input. So, it is not suitable for sorting large integers.
