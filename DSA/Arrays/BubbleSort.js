@@ -9,6 +9,7 @@
        
      if(arr[j] > arr[j+1]){
          
+      // creates a temp array
        var temp = arr[j]
        arr[j] = arr[j + 1]
        arr[j+1] = temp

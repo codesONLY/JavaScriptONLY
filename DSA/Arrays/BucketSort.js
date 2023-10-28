@@ -1,4 +1,6 @@
 const arr = [5, 3, 1, 2, 4, 7, 6];
+
+// bucket sort algo
 const bucketSort = (arr) => {
   if (arr.length === 0) {
     return arr;
