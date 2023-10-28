@@ -2,6 +2,8 @@
  * @param {number} x
  * @return {number}
  */
+
+// function to calculate square root of a number using binary search
  var mySqrt = function(x) {
     let start = 1;
     let end = x;
