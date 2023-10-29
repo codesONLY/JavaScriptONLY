@@ -1,0 +1,60 @@
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  append(data) {
+    const newNode = new Node(data);
+
+    if (!this.head) {
+      this.head = newNode;
+    } else {
+      let current = this.head;
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = newNode;
+    }
+  }
+
+  findNodeAtPosition(position) {
+    if (position < 0 || !this.head) {
+      return null; // Position is out of bounds or the list is empty
+    }
+
+    let current = this.head;
+    let index = 0;
+
+    while (current) {
+      if (index === position) {
+        return current;
+      }
+      current = current.next;
+      index++;
+    }
+
+    return null;
+  }
+}
+const linkedList = new LinkedList();
+linkedList.append(10);
+linkedList.append(20);
+linkedList.append(30);
+linkedList.append(40);
+linkedList.append(50);
+
+const positionToFind = 4; 
+const node = linkedList.findNodeAtPosition(positionToFind);
+
+if (node) {
+  console.log(`Node at position ${positionToFind} contains data: ${node.data}`);
+} else {
+  console.log(`Node at position ${positionToFind} not found.`);
+}
