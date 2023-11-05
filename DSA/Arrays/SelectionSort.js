@@ -1,18 +1,17 @@
 function selectionSort(arr) {
-
     for (let i = 0; i < arr.length - 1; i++) {
         let min_index = i;
         for (let j = i + 1; j < arr.length; j++) {
-            if (arr[j] > arr[min_index]) {
+            if (arr[j] < arr[min_index]) { // Changed the comparison to sort in ascending order
                 min_index = j;
             }
         }
-        let temp = arr[min_index]
-        arr[min_index] = arr[i]
+        let temp = arr[min_index];
+        arr[min_index] = arr[i];
         arr[i] = temp;
     }
-    return arr
+    return arr;
 }
 
-let arr = [4, 12, 10, 15, 2]
-console.log(selectionSort(arr))
+let arr = [4, 12, 10, 15, 2];
+console.log(selectionSort(arr)); // Output: [2, 4, 10, 12, 15]
