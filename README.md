@@ -1,5 +1,7 @@
 # < JavaScriptONLY />👨‍💻 🙏
 
+## HI guys its my first 
+
 ### Its an attempt to provide high quality, well-written set of notes and code-snippets for anyone who wants to learn and refer JavaScript concepts in deep.
 
 ---
