@@ -5,7 +5,7 @@
 ## Abstraction
 
 Abstractions hide details and give us the ability to talk about problems at a higher (or more abstract) level.
-
+Abstraction help to cover up and hide important details which we don't like to share with anyone.
 ## Higher Order Functions
 
 Functions that operate on other functions, either by taking them as arguments or by returning them, are called higher-order functions.
