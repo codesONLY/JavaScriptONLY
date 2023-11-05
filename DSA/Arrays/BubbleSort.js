@@ -1,7 +1,7 @@
 // Bubble sort Implementation using Javascript
   
  function bblSort(arr){
-   
+   // it is not mandatory to initialize i with zero 
  // loop through array
  for(var i = 0; i < arr.length; i++){
      
