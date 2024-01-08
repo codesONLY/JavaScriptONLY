@@ -1,75 +1,57 @@
-# [Episode 10](https://www.youtube.com/watch?v=lW_erSjyMeM&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=12): Closures in JS 🔥 
 
-* Closure: A function bind together with its lexical environment.
 
-Function along with its lexical scope forms a closure.
+---
 
-Function bundled along with the environment.
+# [Episode 10](https://www.youtube.com/watch?v=lW_erSjyMeM&list=PLlasXeu85E9cQ32gLCvAvr9vNaUccPVNP&index=12): Closures in JavaScript 🔥
 
+In JavaScript, closures are a powerful concept that combines a function with its lexical environment, enabling the function to retain access to variables from its parent scope even after the parent function has finished executing.
+
+## Understanding Closures
+
+Let's delve into a few examples to understand how closures work:
+
+**Example 1:**
 ```js
-Example 1
-
-function x(){
-    var a=7;
-    function y(){
+function x() {
+    var a = 7;
+    function y() {
         console.log(a);
     }
     return y;
 }
 
 var z = x();
-console.log(z);
-z();
+console.log(z); // Output: f y(){ console.log(a); }
+z(); // Output: 7
 ```
 
-Output:
->f y(){
-    console.log(a);
-}
->7
+In this example, the inner function `y` maintains a reference to the variable `a` from its lexical scope. Even though the outer function `x` has completed execution, `z` still prints `7` when invoked, demonstrating how the closure retains the environment.
 
-### Observation
-
-Function x() returns a `function y` which prints `variable a` on the console. Here, `a` is not in scope of y() and so the JS engine will search for `a` in its parent's lexical environment. Here, `a` is defined equal to `7`.  
-
-Here after the line `var z = x()` the function x is over and thus it is completely removed from the execution context.
-
-But now when we call `z()`, given that `x()` is completely gone from the context, what should it print?
-
-It prints `7`. This means that `x()` didn't return `function y` but a closure. Since closure is a `function` + `its lexical env`, when `z()` is called, it remembers its lexical environment and thus prints `7`.
-
-Thus, `Closure` is nothing but a function + lexical environment(it has reference of values of vars and funcs).
-
+**Example 2:**
 ```js
-Example 2
-
-function x(){
-    var a=7;
-    function y(){
+function x() {
+    var a = 7;
+    function y() {
         console.log(a);
     }
-    a=100;
+    a = 100;
     return y;
 }
 
 var z = x();
-console.log(z);
-z();
+console.log(z); // Output: f y(){ console.log(a); }
+z(); // Output: 100
 ```
 
-Output:
->f y(){
-    console.log(a);
-}
->100
+Here, even after the value of `a` is changed to `100`, the closure retains the updated value when invoked through `z()`.
 
+**Example 3:**
 ```js
-Example 3
-function z(){
+function z() {
     var b = 900;
-    function x(){
-        var a=7;
-        function y(){
+    function x() {
+        var a = 7;
+        function y() {
             console.log(a, b);
         }
         return y;
@@ -77,20 +59,21 @@ function z(){
 }
 
 var t = x();
-t();
+t(); // Output: 7 900
 ```
 
-Output:
->7 900
+This example highlights how closures encapsulate the lexical environments of all parent levels.
 
-Above example shows that Closure bundles the lexical environment of all the parent levels.
+## Applications of Closures
 
-### Applications of Closures
+Closures find application in various programming scenarios:
 
-- Module Design Pattern
-- Currying
-- Functions like `once`
-- Memoize
-- Maintaining state in `async` world
-- Set timeout
-- Iterators etc.
+- **Module Design Pattern**: Closures help create private variables and methods in JavaScript, facilitating the module design pattern.
+- **Currying**: Closures enable the creation of curried functions, allowing the transformation of functions with multiple arguments into a sequence of functions with a single argument.
+- **Memoization**: Closures can be used to implement memoization, a technique that stores the results of expensive function calls and returns the cached result when the same inputs occur again.
+- **Asynchronous State Management**: Closures aid in maintaining state in asynchronous programming, enabling functions to access their lexical environment even after the parent function has completed execution.
+- **Timeouts and Iterators**: Closures are instrumental in scenarios such as managing timeouts and creating custom iterators.
+
+Understanding closures is crucial for harnessing the full power of JavaScript and developing efficient and robust applications.
+
+---
